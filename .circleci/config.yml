@@ -21,9 +21,9 @@ workflows:
     jobs:
      - notification:
           context: 
-            # test_duplicate_key にも slack_webhook という keyを登録している。
-            # 同じ key が異なる Context で重複している場合、併記されている順序があとの key の value を読んでいる
-            # この場合、Slack、test_duplicate_key の順に併記すると、test_duplicate_key の誤った value を読むのでエラーに。
+            # 以下のContextのうち、Slack および test_duplicate_key の両者にも slack_webhook というkeyを登録している。
+            # 同じ文字列の key が異なる Context で重複している場合、併記されている順序があとの key の value を読んでいる
+            # 仮に↓の順序を入れ替えてSlack、test_duplicate_key の順に併記すると、test_duplicate_key の誤った value を読むのでエラーに。
             - test_duplicate_key
             - Slack
             - test
