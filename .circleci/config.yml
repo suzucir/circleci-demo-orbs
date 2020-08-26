@@ -21,6 +21,6 @@ workflows:
     jobs:
      - notification:
           context: 
+            - test_duplicate_key
             - Slack
             - test
-            - test_duplicate_key
