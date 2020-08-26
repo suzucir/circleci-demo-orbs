@@ -11,7 +11,7 @@ jobs:
       - slack/notify:
           channel: ${slack_channel_id}
           color: '#42e2f4'
-          message: "これはテストです。"
+          message: ${test-text}
           webhook: ${slack_webhook}
           
           
@@ -21,3 +21,4 @@ workflows:
     jobs:
      - notification:
           context: Slack
+          context: Test-Multiple-Context
