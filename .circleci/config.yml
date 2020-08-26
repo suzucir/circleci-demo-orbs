@@ -20,5 +20,6 @@ workflows:
   build_and_test:
     jobs:
      - notification:
-          context: Slack
-          context: test
+          context: 
+            - Slack
+            - test
