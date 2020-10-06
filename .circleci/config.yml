@@ -7,6 +7,9 @@ jobs:
   notification:
     docker:
       - image: cimg/base:stable
+          auth:
+            username: $DOCKERHUB_USER
+            password: $DOCKERHUB_PASSWORD
     steps:
       - slack/notify:
           channel: ${slack_channel_id}
@@ -27,4 +30,5 @@ workflows:
             - test_duplicate_key
             - Slack
             - test
+            - docker-hub-creds
 
