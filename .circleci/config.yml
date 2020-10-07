@@ -32,5 +32,3 @@ workflows:
             - Slack
             - test
             - docker-hub-creds
-
-
