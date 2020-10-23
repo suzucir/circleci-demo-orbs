@@ -17,8 +17,7 @@ jobs:
           color: '#42e2f4'
           message: ${test_message}
           webhook: ${slack_webhook}
-      - hello:
-          echo
+      - run: echo "hello"
           
           
 workflows:
